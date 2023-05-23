@@ -56,51 +56,28 @@ import kotlinx.coroutines.launch
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MyNavDrawerApp() {
-    val drawerState = rememberDrawerState(DrawerValue.Closed)
-    val snackbarState = remember { SnackbarHostState() }
-    val scope = rememberCoroutineScope()
-    val context = LocalContext.current
+//    val drawerState = rememberDrawerState(DrawerValue.Closed)
+//    val snackbarState = remember { SnackbarHostState() }
+//    val scope = rememberCoroutineScope()
+//    val context = LocalContext.current
+
+    val appState = rememberMyNavDrawerState()
 
     ModalNavigationDrawer(
-        drawerState = drawerState,
+        drawerState = appState.drawerState,
         drawerContent = {
             MyDrawerContent(
-                onItemSelected = { title ->
-                    scope.launch {
-                        drawerState.close()
-                        val snackbarResult = snackbarState.showSnackbar(
-                            message = context.resources.getString(R.string.coming_soon, title),
-                            actionLabel = context.resources.getString(R.string.subscribe_question)
-                        )
-                        if(snackbarResult == SnackbarResult.ActionPerformed) {
-                            Toast.makeText(
-                                context,
-                                context.resources.getString(R.string.subscribed_info),
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        }
-                    }
-                },
-                onBackPress = {
-                    if(drawerState.isOpen) {
-                        scope.launch {
-                            drawerState.close()
-                        }
-                    }
-                }
+                onItemSelected = appState::onItemSelected,
+                onBackPress = appState::onBackPress
             )
         },
-        gesturesEnabled = drawerState.isOpen,
+        gesturesEnabled = appState.drawerState.isOpen,
         content = {
             Scaffold(
-                snackbarHost = { SnackbarHost(snackbarState) },
+                snackbarHost = { SnackbarHost(appState.snackbarState) },
                 topBar = {
                     MyTopBar(
-                        onMenuClick = {
-                            scope.launch {
-                                drawerState.open()
-                            }
-                        }
+                        onMenuClick = appState::onMenuClick
                     )
                 }
             ) { innerPadding ->
