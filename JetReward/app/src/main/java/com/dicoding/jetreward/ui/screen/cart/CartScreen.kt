@@ -11,7 +11,11 @@ import com.dicoding.jetreward.R
 
 @Composable
 fun CartScreen(
-    modifier: Modifier = Modifier
+    viewModel: CartViewModel = viewModel(
+        factory = ViewModelFactory(
+            Injection.provideRepository()
+        )
+    ),
 ) {
     Box(
         modifier = modifier.fillMaxSize(),
