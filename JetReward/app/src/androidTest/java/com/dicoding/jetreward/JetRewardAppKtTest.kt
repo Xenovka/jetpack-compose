@@ -14,7 +14,6 @@ import androidx.navigation.testing.TestNavHostController
 import com.dicoding.jetreward.model.FakeRewardDataSource
 import com.dicoding.jetreward.ui.navigation.Screen
 import com.dicoding.jetreward.ui.theme.JetRewardTheme
-import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
