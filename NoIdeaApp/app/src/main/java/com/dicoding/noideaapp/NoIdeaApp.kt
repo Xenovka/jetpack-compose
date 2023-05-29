@@ -65,7 +65,12 @@ fun NoIdeaApp(
                 arguments = listOf(navArgument("rangerId") { type = NavType.StringType }),
             ) {
                 val id = it.arguments?.getString("rangerId") ?: ""
-                DetailScreen()
+                DetailScreen(
+                    rangerId = id,
+                    navigateBack = {
+                        navController.navigateUp()
+                    }
+                )
             }
         }
     }
