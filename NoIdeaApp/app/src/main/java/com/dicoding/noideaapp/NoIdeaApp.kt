@@ -4,7 +4,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Home
-import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
@@ -43,7 +42,8 @@ fun NoIdeaApp(
             if(currentRoute != Screen.DetailRanger.route) {
                 BottomBar(navController)
             }
-        }
+        },
+        modifier = modifier
     ) { innerPadding ->
         NavHost(
             navController = navController,
@@ -88,12 +88,12 @@ private fun BottomBar(
         val currentRoute = navBackStackEntry?.destination?.route
         val navigationItems = listOf(
             NavigationItem(
-                title = stringResource(R.string.menu_home),
+                title = stringResource(R.string.home_page),
                 icon = Icons.Default.Home,
                 screen = Screen.Home
             ),
             NavigationItem(
-                title = stringResource(R.string.menu_profile),
+                title = stringResource(R.string.about_page),
                 icon = Icons.Default.AccountCircle,
                 screen = Screen.Profile
             )

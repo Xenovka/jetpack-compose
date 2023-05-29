@@ -56,19 +56,17 @@ fun HomeContent(
         LazyColumn(
             state = listState
         ) {
-            rangers.forEach{ _ ->
-                items(rangers, key = { it.id }) { ranger ->
-                    RangerListItem(
-                        name = ranger.role,
-                        photoUrl = ranger.photoUrl,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .animateItemPlacement(tween(durationMillis = 100))
-                            .clickable {
-                                navigateToDetail(ranger.id)
-                            }
-                    )
-                }
+            items(rangers) { ranger ->
+                RangerListItem(
+                    name = ranger.role,
+                    photoUrl = ranger.photoUrl,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .animateItemPlacement(tween(durationMillis = 100))
+                        .clickable {
+                            navigateToDetail(ranger.id)
+                        }
+                )
             }
         }
     }

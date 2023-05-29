@@ -20,9 +20,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -93,17 +95,19 @@ fun DetailContent(
                 Text(
                     text = title,
                     textAlign = TextAlign.Center,
-                    style = MaterialTheme.typography.headlineMedium,
+                    softWrap = true,
+                    style = MaterialTheme.typography.headlineSmall,
                     fontWeight = FontWeight.Medium,
                     modifier = modifier
                         .fillMaxWidth()
-                        .padding(12.dp)
+                        .padding(vertical = 12.dp, horizontal = 50.dp)
                 )
             }
 
             AsyncImage(
                 model = photoUrl,
                 contentDescription = title,
+                contentScale = ContentScale.Crop,
                 modifier = modifier
                     .fillMaxWidth()
                     .height(300.dp)
@@ -145,7 +149,7 @@ fun DetailContentPreview() {
     NoIdeaAppTheme {
         DetailContent(
             "https://static.wikia.nocookie.net/powerrangers/images/a/a2/Red_Dino_Ranger_%26_AbaRed.png/revision/latest/scale-to-width-down/1000?cb=20230528152057",
-            "Red Dino Ranger",
+            "Red Dino Ranger Ranger Ranger",
             "Conner McKnight is the Red Dino Ranger and leader of the Dino Rangers.\n\nRetroactively, he is also referred to as the Dino Thunder Red Ranger or Red Dino Thunder Ranger though these are in reference to the show, as opposed to proper labels. Conner has an identical twin brother named Eric McKnight (also played by James Napier) who was once a student at the Wind Ninja Academy, but later flunked out.",
             "Dino Thunder",
             "Red",
