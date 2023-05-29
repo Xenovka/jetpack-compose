@@ -2,4 +2,8 @@
     <string name="app_name">NoIdeaApp</string>
     <string name="menu_home">Home</string>
     <string name="menu_profile">Profile</string>
+    <string name="back">Back</string>
+    <string name="rangerColor">Color: %s</string>
+    <string name="rangerRole">Role: %s</string>
+    <string name="rangerSquad">Squad: %s</string>
 </resources>
