@@ -16,7 +16,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.dicoding.noideaapp.di.Injection
-import com.dicoding.noideaapp.model.PowerRangers
 import com.dicoding.noideaapp.ui.ViewModelFactory
 import com.dicoding.noideaapp.ui.common.UiState
 import com.dicoding.noideaapp.ui.components.RangerListItem
