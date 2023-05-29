@@ -26,6 +26,16 @@ class Repository {
         }
     }
 
+    fun getRangers(): List<PowerRangers> {
+        return PowerRangersData.rangers
+    }
+
+    fun searchRangers(query: String): List<PowerRangers> {
+        return PowerRangersData.rangers.filter {
+            it.role.contains(query, ignoreCase = true)
+        }
+    }
+
     companion object {
         @Volatile
         private var instance: Repository? = null
