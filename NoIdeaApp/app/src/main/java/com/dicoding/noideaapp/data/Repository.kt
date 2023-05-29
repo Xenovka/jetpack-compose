@@ -20,6 +20,12 @@ class Repository {
         return flowOf(powerRangers)
     }
 
+    fun getRangerById(rangerId: String): PowerRangers {
+        return powerRangers.first {
+            it.id == rangerId
+        }
+    }
+
     companion object {
         @Volatile
         private var instance: Repository? = null
