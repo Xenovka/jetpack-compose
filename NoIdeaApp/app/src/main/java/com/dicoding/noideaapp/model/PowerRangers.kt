@@ -2,6 +2,7 @@ package com.dicoding.noideaapp.model
 
 data class PowerRangers(
     val id: String,
+    val name: String,
     val squadName: String,
     val color: String,
     val role: String,

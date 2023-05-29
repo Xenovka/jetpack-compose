@@ -4,6 +4,7 @@ object PowerRangersData {
     val rangers = listOf(
         PowerRangers(
             "dino-1",
+            "Red Dino Ranger",
             "Dino Thunder",
             "Red",
             "Conner McKnight",
@@ -12,6 +13,7 @@ object PowerRangersData {
         ),
         PowerRangers(
             "dino-2",
+            "Blue Dino Ranger",
             "Dino Thunder",
             "Blue",
             "Ethan James",
@@ -20,6 +22,7 @@ object PowerRangersData {
         ),
         PowerRangers(
             "dino-3",
+            "Yellor Dino Ranger",
             "Dino Thunder",
             "Yellow",
             "Kira Ford",
@@ -28,6 +31,7 @@ object PowerRangersData {
         ),
         PowerRangers(
             "dino-4",
+            "Black Dino Ranger",
             "Dino Thunder",
             "Black",
             "Tommy Oliver",
@@ -36,6 +40,7 @@ object PowerRangersData {
         ),
         PowerRangers(
             "dino-5",
+            "White Dino Ranger",
             "Dino Thunder",
             "White",
             "Trent Fernandez-Mercer",
@@ -44,6 +49,7 @@ object PowerRangersData {
         ),
         PowerRangers(
             "wind-1",
+            "Red Wind Ranger",
             "Ninja Storm",
             "Red",
             "Shane Clarke",
@@ -52,6 +58,7 @@ object PowerRangersData {
         ),
         PowerRangers(
             "wind-2",
+            "Blue Wind Ranger",
             "Ninja Storm",
             "Blue",
             "Tori Hanson",
@@ -60,6 +67,7 @@ object PowerRangersData {
         ),
         PowerRangers(
             "wind-3",
+            "Yellow Wind Ranger",
             "Ninja Storm",
             "Yellow",
             "Dustin Brooks",
@@ -68,6 +76,7 @@ object PowerRangersData {
         ),
         PowerRangers(
             "wind-4",
+            "Crimson Wind Ranger",
             "Ninja Storm",
             "Crimson",
             "Hunter Bradley",
@@ -76,6 +85,7 @@ object PowerRangersData {
         ),
         PowerRangers(
             "wind-5",
+            "Navy Wind Ranger",
             "Ninja Storm",
             "Navy",
             "Blake Bradley",
@@ -84,6 +94,7 @@ object PowerRangersData {
         ),
         PowerRangers(
             "wind-6",
+            "Green Wind Ranger",
             "Ninja Storm",
             "Green",
             "Cameron Watanabe",
@@ -92,6 +103,7 @@ object PowerRangersData {
         ),
         PowerRangers(
             "cosmic-1",
+            "Cosmic Fury Zenith Ranger",
             "Cosmic Fury",
             "White",
             "Zayto",
@@ -100,6 +112,7 @@ object PowerRangersData {
         ),
         PowerRangers(
             "cosmic-2",
+            "Cosmic Fury Red Ranger",
             "Cosmic Fury",
             "Red",
             "Amelia Jones",
@@ -108,6 +121,7 @@ object PowerRangersData {
         ),
         PowerRangers(
             "cosmic-3",
+            "Cosmic Fury Blue Ranger",
             "Cosmic Fury",
             "Blue",
             "Ollie Akana",
@@ -116,6 +130,7 @@ object PowerRangersData {
         ),
         PowerRangers(
             "cosmic-4",
+            "Cosmic Fury Green Ranger",
             "Cosmic Fury",
             "Green",
             "Izzy Garcia",
@@ -124,6 +139,7 @@ object PowerRangersData {
         ),
         PowerRangers(
             "cosmic-5",
+            "Cosmic Fury Black Ranger",
             "Cosmic Fury",
             "Black",
             "Javi Garcia",
@@ -132,6 +148,7 @@ object PowerRangersData {
         ),
         PowerRangers(
             "cosmic-6",
+            "Cosmic Fury Gold Ranger",
             "Cosmic Fury",
             "Gold",
             "Aiyon",
